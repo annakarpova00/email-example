@@ -1,0 +1,68 @@
+<form action="/" method="post">
+    <div>
+        <label>
+            First name
+            <input type="text" name="name" value="<?=htmlspecialchars($body['name'] ?? '') ?>">
+        </label>
+    </div>
+    <div>
+        <label>
+            Last name
+            <input type="text" name="last-name" value="<?=htmlspecialchars($body['last-name'] ?? '') ?>">
+        </label>
+    </div>
+    <div>
+        <label>
+            E-mail
+            <input type="email" name="email" value="<?=htmlspecialchars($body['email'] ?? '') ?>">
+        </label>
+    </div>
+    <div>
+        <label>
+            Phone
+            <input type="tel" name="phone" value="<?=htmlspecialchars($body['phone'] ?? '') ?>">
+        </label>
+    </div>
+    <div>
+        <label>
+            Additional guests
+            <input type="text" name="guests" value="<?=htmlspecialchars($body['guests'] ?? '') ?>">
+        </label>
+    </div>
+    <div>
+        <label>
+            Golf outing
+            <select name="golfOption">
+                <option value="withoutGolfing"> Without golfing </option>
+                <option value="withGolfing" Include +$175 </option>
+            </select>
+    </div>
+
+    <div>
+        <label>
+            Food sensitivities
+            <input type="text" name="food_sensitivities" value="<?=htmlspecialchars($body['food_sensitivities'] ?? '') ?>">
+        </label>
+    </div>
+    <div>
+        <label>
+            Is it ok to share your email with our vendors?
+            <input type="checkbox" name="share" value="1">
+        </label>
+    </div>
+
+    <input type="submit" value="Procede to payment: $1000">
+
+</form>
+
+<style>
+    form div {
+        margin-bottom: 5px;
+    }
+
+    label {
+        display: inline-block;
+        width: 200px;
+    }
+
+</style>
